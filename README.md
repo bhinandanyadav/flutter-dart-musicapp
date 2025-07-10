@@ -114,12 +114,6 @@ See `API_INTEGRATION_GUIDE.md` and `SONG_INTEGRATION_GUIDE.md` for full details.
 
 ---
 
-## 📱 Screenshots
-
-> _Add your screenshots here!_
-
----
-
 ## 🤝 Contributing
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
