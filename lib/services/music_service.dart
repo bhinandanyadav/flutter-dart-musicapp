@@ -20,12 +20,9 @@ class MusicService {
 
   // Current playing song
   Song? _currentSong;
-  final bool _isPlaying = false;
   bool _isShuffleOn = false;
   bool _isRepeatOn = false;
   double _volume = 1.0;
-  final double _currentPosition = 0.0;
-  final double _totalDuration = 1.0; // Avoid division by zero
 
   // Getters
   Song? get currentSong => _currentSong;
@@ -294,13 +291,6 @@ class MusicService {
   }
 
   // Utility methods
-  double _parseTimeToSeconds(String time) {
-    final parts = time.split(':');
-    final minutes = int.parse(parts[0]);
-    final seconds = int.parse(parts[1]);
-    return (minutes * 60 + seconds).toDouble();
-  }
-
   String formatDuration(double seconds) {
     final int mins = seconds ~/ 60;
     final int secs = seconds.toInt() % 60;

@@ -1,11 +1,6 @@
-import 'dart:convert';
-import 'dart:io';
-import 'package:http/http.dart' as http;
 import '../model/song_model.dart';
 
 class YouTubeMusicService {
-  static const String _baseUrl = 'https://music.youtube.com';
-
   // Search for songs on YouTube Music
   Future<List<Song>> searchSongs(String query, {int limit = 20}) async {
     try {
