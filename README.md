@@ -4,6 +4,26 @@ A beautiful, modern, and fully-featured music player app built with Flutter and 
 
 ---
 
+## 📸 Screenshots
+
+### App Interface Gallery
+
+<p align="center">
+  <img src="flutter_01.png" alt="Home Screen" width="200"/>
+  <img src="flutter_02.png" alt="Search Interface" width="200"/>
+  <img src="flutter_03.png" alt="Player Screen" width="200"/>
+  <img src="flutter_04.png" alt="Library View" width="200"/>
+</p>
+
+<p align="center">
+  <img src="flutter_05.png" alt="Playlist Management" width="200"/>
+  <img src="flutter_06.png" alt="Profile Page" width="200"/>
+  <img src="flutter_07.png" alt="Mini Player" width="200"/>
+  <img src="flutter_08.png" alt="Settings" width="200"/>
+</p>
+
+---
+
 ## 🎵 Features
 
 - **Modern UI**: Clean, responsive, and visually appealing interface
