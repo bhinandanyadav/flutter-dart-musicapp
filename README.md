@@ -6,9 +6,6 @@ A beautiful, modern, and fully-featured music player app built with Flutter and 
 
 ## 📸 Screenshots
 
-### App Interface Gallery
-
-<p align="center">
   ### Home Screen 
   <img width="1366" height="768" alt="homepage" src="https://github.com/user-attachments/assets/531a4d4d-e286-4a5f-9646-f33b00e663c2" />
 
@@ -21,9 +18,6 @@ A beautiful, modern, and fully-featured music player app built with Flutter and 
  ### Library View
  <img width="1366" height="768" alt="librarypage" src="https://github.com/user-attachments/assets/400ad14e-2507-4960-b596-86daea3430e7" />
 
-</p>
-
-<p align="center">
   ### Songs
   <img width="1366" height="768" alt="librarypage" src="https://github.com/user-attachments/assets/dfa859fb-c7e7-45ec-885d-527bdf4f259b" />
 
@@ -35,9 +29,6 @@ A beautiful, modern, and fully-featured music player app built with Flutter and 
 
 ### Help & Support
 <img width="1366" height="768" alt="profilepage3" src="https://github.com/user-attachments/assets/d5a7f71c-f9bf-47ed-9b0a-7f2abb2ada46" />
-
-
-</p>
 
 ---
 
