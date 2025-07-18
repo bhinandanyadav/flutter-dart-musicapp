@@ -8,6 +8,8 @@ class Song {
   final String audioPath;
   final bool isLiked;
   final bool isDownloaded;
+  final String? genre;
+  final int? year;
 
   Song({
     required this.id,
@@ -19,6 +21,8 @@ class Song {
     required this.audioPath,
     this.isLiked = false,
     this.isDownloaded = false,
+    this.genre,
+    this.year,
   });
 
   Song copyWith({
@@ -31,6 +35,8 @@ class Song {
     String? audioPath,
     bool? isLiked,
     bool? isDownloaded,
+    String? genre,
+    int? year,
   }) {
     return Song(
       id: id ?? this.id,
@@ -42,6 +48,8 @@ class Song {
       audioPath: audioPath ?? this.audioPath,
       isLiked: isLiked ?? this.isLiked,
       isDownloaded: isDownloaded ?? this.isDownloaded,
+      genre: genre ?? this.genre,
+      year: year ?? this.year,
     );
   }
 }

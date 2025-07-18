@@ -4,13 +4,13 @@ import 'model/song_model.dart';
 import 'providers/music_provider.dart';
 
 class SearchPage extends StatefulWidget {
-  const SearchPage({Key? key}) : super(key: key);
+  const SearchPage({super.key});
 
   @override
-  _SearchPageState createState() => _SearchPageState();
+  SearchPageState createState() => SearchPageState();
 }
 
-class _SearchPageState extends State<SearchPage> {
+class SearchPageState extends State<SearchPage> {
   final TextEditingController _searchController = TextEditingController();
   final MusicProvider _musicProvider = MusicProvider();
 
@@ -134,7 +134,7 @@ class _SearchPageState extends State<SearchPage> {
                               Icon(
                                 Icons.search_off,
                                 size: 70,
-                                color: AppColors.secondaryText.withOpacity(0.5),
+                                color: AppColors.secondaryText.withValues(alpha: 0.5),
                               ),
                               const SizedBox(height: 20),
                               Text(
@@ -148,7 +148,7 @@ class _SearchPageState extends State<SearchPage> {
                               Text(
                                 "Try searching for something else",
                                 style: TextStyle(
-                                  color: AppColors.secondaryText.withOpacity(
+                                  color: AppColors.secondaryText.withValues(alpha: 
                                     0.7,
                                   ),
                                   fontSize: 14,
@@ -318,7 +318,7 @@ class _SearchPageState extends State<SearchPage> {
                   Text(
                     "${song.artist} • ${song.album}",
                     style: TextStyle(
-                      color: Colors.white.withOpacity(0.7),
+                      color: Colors.white.withValues(alpha: 0.7),
                       fontSize: 14,
                     ),
                     maxLines: 1,
@@ -332,7 +332,7 @@ class _SearchPageState extends State<SearchPage> {
             Text(
               song.duration,
               style: TextStyle(
-                color: Colors.white.withOpacity(0.5),
+                color: Colors.white.withValues(alpha: 0.5),
                 fontSize: 14,
               ),
             ),

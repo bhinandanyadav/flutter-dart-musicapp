@@ -4,6 +4,7 @@ class AppColors {
   // Primary colors
   static const Color background = Color(0xFF0A0E21);
   static const Color cardBackground = Color(0xFF1D1E33);
+  static const Color accent = Color(0xFF4CD964); // Main accent color
   static const Color accentGreen = Color(0xFF4CD964);
   static const Color accentPurple = Color(0xFF9B51E0);
   static const Color accentPink = Color(0xFFFF6B6B);

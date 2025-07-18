@@ -31,9 +31,12 @@ dependencies:
   flutter:
     sdk: flutter
   audioplayers: ^6.5.0
-  just_audio: ^0.10.4
   http: ^1.1.0
   cupertino_icons: ^1.0.8
+  provider: ^6.0.5
+  shared_preferences: ^2.2.2
+  path_provider: ^2.1.1
+  cached_network_image: ^3.3.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -66,6 +69,7 @@ flutter:
     - assets/search.png
     - assets/notification.jpg
     - assets/Dua-Levitating.mp3
+    - assets/music/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

@@ -9,10 +9,10 @@ class LibraryPage extends StatefulWidget {
   const LibraryPage({super.key});
 
   @override
-  _LibraryPageState createState() => _LibraryPageState();
+  LibraryPageState createState() => LibraryPageState();
 }
 
-class _LibraryPageState extends State<LibraryPage>
+class LibraryPageState extends State<LibraryPage>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
   final MusicProvider _musicProvider = MusicProvider();
@@ -118,7 +118,7 @@ class _LibraryPageState extends State<LibraryPage>
         color: AppColors.cardBackground,
         borderRadius: BorderRadius.circular(15),
         border: Border.all(
-          color: AppColors.accentGreen.withOpacity(0.5),
+          color: AppColors.accentGreen.withValues(alpha: 0.5),
           width: 1,
         ),
       ),
@@ -127,7 +127,7 @@ class _LibraryPageState extends State<LibraryPage>
           width: 50,
           height: 50,
           decoration: BoxDecoration(
-            color: AppColors.accentGreen.withOpacity(0.2),
+            color: AppColors.accentGreen.withValues(alpha: 0.2),
             borderRadius: BorderRadius.circular(10),
           ),
           child: const Icon(Icons.add, color: AppColors.accentGreen),
@@ -161,9 +161,9 @@ class _LibraryPageState extends State<LibraryPage>
         style: const TextStyle(color: Colors.white),
         decoration: InputDecoration(
           hintText: "Playlist name",
-          hintStyle: TextStyle(color: Colors.white.withOpacity(0.5)),
+          hintStyle: TextStyle(color: Colors.white.withValues(alpha: 0.5)),
           enabledBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: Colors.white.withOpacity(0.5)),
+            borderSide: BorderSide(color: Colors.white.withValues(alpha: 0.5)),
           ),
           focusedBorder: const UnderlineInputBorder(
             borderSide: BorderSide(color: AppColors.accentGreen),
@@ -225,7 +225,7 @@ class _LibraryPageState extends State<LibraryPage>
         ),
         subtitle: Text(
           "${playlist.songCount} songs • ${playlist.formattedDuration}",
-          style: TextStyle(color: Colors.white.withOpacity(0.7)),
+          style: TextStyle(color: Colors.white.withValues(alpha: 0.7)),
         ),
         trailing: IconButton(
           icon: const Icon(Icons.more_vert, color: Colors.white54),
@@ -298,7 +298,7 @@ class _LibraryPageState extends State<LibraryPage>
                 Text(
                   song.artist,
                   style: TextStyle(
-                    color: Colors.white.withOpacity(0.7),
+                    color: Colors.white.withValues(alpha: 0.7),
                     fontSize: 14,
                   ),
                   maxLines: 1,
@@ -322,7 +322,7 @@ class _LibraryPageState extends State<LibraryPage>
             child: Text(
               song.duration,
               style: TextStyle(
-                color: Colors.white.withOpacity(0.5),
+                color: Colors.white.withValues(alpha: 0.5),
                 fontSize: 14,
               ),
             ),
@@ -425,11 +425,11 @@ class _LibraryPageState extends State<LibraryPage>
             aspectRatio: 1,
             child: Container(
               decoration: BoxDecoration(
-                color: color.withOpacity(0.8),
+                color: color.withValues(alpha: 0.8),
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
-                    color: color.withOpacity(0.3),
+                    color: color.withValues(alpha: 0.3),
                     blurRadius: 10,
                     offset: const Offset(0, 5),
                   ),
@@ -439,7 +439,7 @@ class _LibraryPageState extends State<LibraryPage>
                 child: Icon(
                   Icons.music_note,
                   size: 50,
-                  color: Colors.white.withOpacity(0.3),
+                  color: Colors.white.withValues(alpha: 0.3),
                 ),
               ),
             ),
@@ -459,7 +459,7 @@ class _LibraryPageState extends State<LibraryPage>
           Text(
             artist,
             style: TextStyle(
-              color: Colors.white.withOpacity(0.7),
+              color: Colors.white.withValues(alpha: 0.7),
               fontSize: 14,
             ),
             maxLines: 1,

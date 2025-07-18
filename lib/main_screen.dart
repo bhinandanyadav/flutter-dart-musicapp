@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'app_colors.dart';
-import 'my_home_page.dart';
+import 'linux_home_page.dart';
 import 'search_page_api.dart';
 import 'library_page.dart';
 import 'profile_page.dart';
@@ -17,7 +17,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
   final List<Widget> _screens = [
-    const MyHomePage(),
+    const LinuxHomePage(),
     const SearchPageApi(), // Use the new API-powered search page
     const LibraryPage(),
     const ProfilePage(),
@@ -33,9 +33,9 @@ class _MainScreenState extends State<MainScreen> {
 
           // Mini player at bottom
           Positioned(
-            left: 0,
-            right: 0,
-            bottom: 80, // Increased space for bottom navigation
+            left: 100,
+            right: 100,
+            bottom: 10, // Increased space for bottom navigation
             child: const Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: MusicMiniPlayer(),
@@ -49,16 +49,16 @@ class _MainScreenState extends State<MainScreen> {
           boxShadow: [
             BoxShadow(
               // ignore: deprecated_member_use
-              color: Colors.black.withOpacity(0.1),
-              blurRadius: 10,
+              color: Colors.black.withValues(alpha: 0.1),
+              blurRadius: 10000,
               offset: const Offset(0, -5),
             ),
           ],
         ),
         child: ClipRRect(
           borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(20.0),
-            topRight: Radius.circular(20.0),
+            topLeft: Radius.circular(90.0),
+            topRight: Radius.circular(90.0),
           ),
           child: BottomNavigationBar(
             backgroundColor: AppColors.cardBackground,

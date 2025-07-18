@@ -5,7 +5,7 @@ import 'audio_service.dart';
 import 'spotify_api_service.dart';
 import 'lastfm_api_service.dart';
 import 'youtube_music_service.dart';
-import 'package:just_audio/just_audio.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class MusicService {
   // Singleton pattern

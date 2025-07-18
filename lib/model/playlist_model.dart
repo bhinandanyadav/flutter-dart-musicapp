@@ -7,19 +7,25 @@ class Playlist {
   final String description;
   final List<String> artistNames;
   final List<Song> songs;
+  final List<String> songIds;
   final String imageUrl;
+  final String coverUrl;
   final List<Color> gradientColors;
   final int totalDuration; // in seconds
+  final bool isLiked;
 
   Playlist({
     required this.id,
     required this.name,
     required this.description,
-    required this.artistNames,
-    required this.songs,
-    required this.imageUrl,
-    required this.gradientColors,
-    required this.totalDuration,
+    this.artistNames = const [],
+    this.songs = const [],
+    this.songIds = const [],
+    this.imageUrl = '',
+    this.coverUrl = '',
+    this.gradientColors = const [],
+    this.totalDuration = 0,
+    this.isLiked = false,
   });
 
   String get formattedDuration {

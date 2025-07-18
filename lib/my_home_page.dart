@@ -3,7 +3,7 @@ import 'app_colors.dart';
 import 'player_page.dart';
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -236,7 +236,7 @@ class MyHomePage extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               // ignore: deprecated_member_use
-              color: gradientColors[0].withOpacity(0.3),
+              color: gradientColors[0].withValues(alpha: 0.3),
               offset: const Offset(0, 4),
               blurRadius: 10,
             ),
@@ -267,7 +267,7 @@ class MyHomePage extends StatelessWidget {
                 subtitle,
                 style: TextStyle(
                   // ignore: deprecated_member_use
-                  color: Colors.white.withOpacity(0.7),
+                  color: Colors.white.withValues(alpha: 0.7),
                   fontSize: 12,
                 ),
                 maxLines: 2,
@@ -338,7 +338,7 @@ class MyHomePage extends StatelessWidget {
                     artist,
                     style: TextStyle(
                       // ignore: deprecated_member_use
-                      color: Colors.white.withOpacity(0.7),
+                      color: Colors.white.withValues(alpha: 0.7),
                       fontSize: 14,
                     ),
                     maxLines: 1,
@@ -353,7 +353,7 @@ class MyHomePage extends StatelessWidget {
               duration,
               style: TextStyle(
                 // ignore: deprecated_member_use
-                color: Colors.white.withOpacity(0.5),
+                color: Colors.white.withValues(alpha: 0.5),
                 fontSize: 14,
               ),
             ),

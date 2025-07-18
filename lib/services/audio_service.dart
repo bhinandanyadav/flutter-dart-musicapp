@@ -1,4 +1,5 @@
-import 'package:just_audio/just_audio.dart';
+import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/foundation.dart';
 import '../model/song_model.dart';
 
 class AudioService {
@@ -7,23 +8,33 @@ class AudioService {
   AudioService._internal();
 
   final AudioPlayer _audioPlayer = AudioPlayer();
+  Duration? _duration;
 
   // Streams for UI updates
-  Stream<Duration?> get positionStream => _audioPlayer.positionStream;
-  Stream<Duration?> get durationStream => _audioPlayer.durationStream;
-  Stream<PlayerState> get playerStateStream => _audioPlayer.playerStateStream;
-  Stream<bool> get playingStream => _audioPlayer.playingStream;
+  Stream<Duration> get positionStream => _audioPlayer.onPositionChanged;
+  Stream<Duration> get durationStream => _audioPlayer.onDurationChanged;
+  Stream<PlayerState> get playerStateStream =>
+      _audioPlayer.onPlayerStateChanged;
+  Stream<bool> get playingStream => _audioPlayer.onPlayerStateChanged.map(
+    (state) => state == PlayerState.playing,
+  );
 
   // Getters
-  Duration? get position => _audioPlayer.position;
-  Duration? get duration => _audioPlayer.duration;
-  PlayerState get playerState => _audioPlayer.playerState;
-  bool get playing => _audioPlayer.playing;
-
+  Duration? get position =>
+      Duration.zero; // audioplayers doesn't have direct position getter
+  Duration? get duration => _duration;
+  PlayerState get playerState =>
+      PlayerState.stopped; // simplified for audioplayers
+  bool get playing => false; // will be updated via streams
   // Initialize audio player
   Future<void> initialize() async {
     try {
-      await _audioPlayer.setLoopMode(LoopMode.off);
+      // audioplayers doesn't have setLoopMode, we'll handle repeat in the service layer
+
+      // Listen to duration changes
+      _audioPlayer.onDurationChanged.listen((duration) {
+        _duration = duration;
+      });
     } catch (e) {
       print('Error initializing audio player: $e');
     }
@@ -35,17 +46,14 @@ class AudioService {
       // Stop current playback
       await _audioPlayer.stop();
 
-      // Set audio source
+      // Set audio source and play
       if (song.audioPath.startsWith('http')) {
         // For network URLs
-        await _audioPlayer.setUrl(song.audioPath);
+        await _audioPlayer.play(UrlSource(song.audioPath));
       } else {
         // For local assets
-        await _audioPlayer.setAsset(song.audioPath);
+        await _audioPlayer.play(AssetSource(song.audioPath));
       }
-
-      // Start playback
-      await _audioPlayer.play();
     } catch (e) {
       print('Error playing song: $e');
     }
@@ -63,7 +71,7 @@ class AudioService {
   // Resume playback
   Future<void> resume() async {
     try {
-      await _audioPlayer.play();
+      await _audioPlayer.resume();
     } catch (e) {
       print('Error resuming playback: $e');
     }
@@ -93,15 +101,6 @@ class AudioService {
       await _audioPlayer.setVolume(volume);
     } catch (e) {
       print('Error setting volume: $e');
-    }
-  }
-
-  // Set loop mode
-  Future<void> setLoopMode(LoopMode mode) async {
-    try {
-      await _audioPlayer.setLoopMode(mode);
-    } catch (e) {
-      print('Error setting loop mode: $e');
     }
   }
 

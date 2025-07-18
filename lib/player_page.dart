@@ -6,10 +6,10 @@ class PlayerPage extends StatefulWidget {
   const PlayerPage({super.key});
 
   @override
-  _PlayerPageState createState() => _PlayerPageState();
+  PlayerPageState createState() => PlayerPageState();
 }
 
-class _PlayerPageState extends State<PlayerPage>
+class PlayerPageState extends State<PlayerPage>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   double _sliderValue = 0.7;
@@ -108,7 +108,7 @@ class _PlayerPageState extends State<PlayerPage>
                           ),
                           boxShadow: [
                             BoxShadow(
-                              color: AppColors.accentPurple.withOpacity(0.3),
+                              color: AppColors.accentPurple.withValues(alpha: 0.3),
                               blurRadius: 20,
                               spreadRadius: 5,
                             ),
@@ -154,7 +154,7 @@ class _PlayerPageState extends State<PlayerPage>
                     Text(
                       "The Weeknd",
                       style: TextStyle(
-                        color: Colors.white.withOpacity(0.7),
+                        color: Colors.white.withValues(alpha: 0.7),
                         fontSize: 18,
                       ),
                     ),
@@ -169,7 +169,7 @@ class _PlayerPageState extends State<PlayerPage>
                     SliderTheme(
                       data: SliderTheme.of(context).copyWith(
                         activeTrackColor: AppColors.accentGreen,
-                        inactiveTrackColor: Colors.white.withOpacity(0.2),
+                        inactiveTrackColor: Colors.white.withValues(alpha: 0.2),
                         thumbColor: AppColors.accentGreen,
                         trackHeight: 4.0,
                         thumbShape: const RoundSliderThumbShape(
@@ -200,14 +200,14 @@ class _PlayerPageState extends State<PlayerPage>
                           Text(
                             "2:15",
                             style: TextStyle(
-                              color: Colors.white.withOpacity(0.7),
+                              color: Colors.white.withValues(alpha: 0.7),
                               fontSize: 12,
                             ),
                           ),
                           Text(
                             "3:20",
                             style: TextStyle(
-                              color: Colors.white.withOpacity(0.7),
+                              color: Colors.white.withValues(alpha: 0.7),
                               fontSize: 12,
                             ),
                           ),
@@ -226,7 +226,7 @@ class _PlayerPageState extends State<PlayerPage>
                     // Shuffle button
                     IconButton(
                       icon: const Icon(Icons.shuffle),
-                      color: Colors.white.withOpacity(0.7),
+                      color: Colors.white.withValues(alpha: 0.7),
                       iconSize: 25,
                       onPressed: () {},
                     ),
@@ -253,8 +253,8 @@ class _PlayerPageState extends State<PlayerPage>
                         boxShadow: [
                           BoxShadow(
                             color: _isPlaying
-                                ? AppColors.accentGreen.withOpacity(0.3)
-                                : Colors.white.withOpacity(0.2),
+                                ? AppColors.accentGreen.withValues(alpha: 0.3)
+                                : Colors.white.withValues(alpha: 0.2),
                             blurRadius: 15,
                             spreadRadius: 5,
                           ),
@@ -295,7 +295,7 @@ class _PlayerPageState extends State<PlayerPage>
                         _isFavorite ? Icons.favorite : Icons.favorite_border,
                         color: _isFavorite
                             ? AppColors.accentPink
-                            : Colors.white.withOpacity(0.7),
+                            : Colors.white.withValues(alpha: 0.7),
                       ),
                       iconSize: 25,
                       onPressed: () {
@@ -316,7 +316,7 @@ class _PlayerPageState extends State<PlayerPage>
                     // Playlist button
                     _buildCircleButton(
                       Icons.playlist_play,
-                      Colors.white.withOpacity(0.05),
+                      Colors.white.withValues(alpha: 0.05),
                       () {},
                     ),
 
@@ -325,7 +325,7 @@ class _PlayerPageState extends State<PlayerPage>
                     // Download button
                     _buildCircleButton(
                       Icons.file_download_outlined,
-                      Colors.white.withOpacity(0.05),
+                      Colors.white.withValues(alpha: 0.05),
                       () {},
                     ),
 
@@ -334,7 +334,7 @@ class _PlayerPageState extends State<PlayerPage>
                     // Share button
                     _buildCircleButton(
                       Icons.share_outlined,
-                      Colors.white.withOpacity(0.05),
+                      Colors.white.withValues(alpha: 0.05),
                       () {},
                     ),
                   ],
@@ -376,7 +376,7 @@ class VisualizerPainter extends CustomPainter {
 
     // Define paint for circle
     final circlePaint = Paint()
-      ..color = AppColors.cardBackground.withOpacity(0.8)
+      ..color = AppColors.cardBackground.withValues(alpha: 0.8)
       ..style = PaintingStyle.fill;
 
     // Draw background circle

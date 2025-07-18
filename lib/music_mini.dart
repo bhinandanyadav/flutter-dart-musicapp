@@ -3,7 +3,7 @@ import 'app_colors.dart';
 import 'player_page.dart';
 
 class MusicMiniPlayer extends StatelessWidget {
-  const MusicMiniPlayer({Key? key}) : super(key: key);
+  const MusicMiniPlayer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class MusicMiniPlayer extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.black.withValues(alpha: 0.1),
               blurRadius: 10,
               offset: const Offset(0, 5),
             ),
@@ -73,7 +73,7 @@ class MusicMiniPlayer extends StatelessWidget {
                     Text(
                       "The Weeknd",
                       style: TextStyle(
-                        color: Colors.white.withOpacity(0.7),
+                        color: Colors.white.withValues(alpha: 0.7),
                         fontSize: 14,
                       ),
                       maxLines: 1,
@@ -88,7 +88,7 @@ class MusicMiniPlayer extends StatelessWidget {
                 height: 40,
                 width: 40,
                 decoration: BoxDecoration(
-                  color: AppColors.accentGreen.withOpacity(0.1),
+                  color: AppColors.accentGreen.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: IconButton(
@@ -108,7 +108,7 @@ class MusicMiniPlayer extends StatelessWidget {
                 height: 40,
                 width: 40,
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.05),
+                  color: Colors.white.withValues(alpha: 0.05),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: IconButton(

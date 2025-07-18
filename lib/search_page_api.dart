@@ -7,10 +7,10 @@ class SearchPageApi extends StatefulWidget {
   const SearchPageApi({super.key});
 
   @override
-  _SearchPageApiState createState() => _SearchPageApiState();
+  SearchPageApiState createState() => SearchPageApiState();
 }
 
-class _SearchPageApiState extends State<SearchPageApi> {
+class SearchPageApiState extends State<SearchPageApi> {
   final TextEditingController _searchController = TextEditingController();
   final MusicProvider _musicProvider = MusicProvider();
 
@@ -108,7 +108,7 @@ class _SearchPageApiState extends State<SearchPageApi> {
                       hintText: "Search for songs, artists, or albums...",
                       hintStyle: TextStyle(
                         // ignore: deprecated_member_use
-                        color: Colors.white.withOpacity(0.5),
+                        color: Colors.white.withValues(alpha: 0.5),
                       ),
                       prefixIcon: const Icon(
                         Icons.search,
@@ -150,7 +150,7 @@ class _SearchPageApiState extends State<SearchPageApi> {
                     Text(
                       "Search from: ",
                       // ignore: deprecated_member_use
-                      style: TextStyle(color: Colors.white.withOpacity(0.7)),
+                      style: TextStyle(color: Colors.white.withValues(alpha: 0.7)),
                     ),
                     const SizedBox(width: 10),
                     Container(
@@ -247,7 +247,7 @@ class _SearchPageApiState extends State<SearchPageApi> {
         // Top Tracks
         if (_topTracks.isNotEmpty) ...[
           _buildSectionHeader("Top Tracks"),
-          ..._topTracks.map((song) => _buildSongItem(song)).toList(),
+          ..._topTracks.map((song) => _buildSongItem(song)),
           const SizedBox(height: 20), // Extra space at bottom
         ],
       ],
@@ -321,7 +321,7 @@ class _SearchPageApiState extends State<SearchPageApi> {
           Text(
             song.artist,
             style: TextStyle(
-              color: Colors.white.withOpacity(0.7),
+              color: Colors.white.withValues(alpha: 0.7),
               fontSize: 12,
             ),
             maxLines: 1,
@@ -390,7 +390,7 @@ class _SearchPageApiState extends State<SearchPageApi> {
                 Text(
                   song.artist,
                   style: TextStyle(
-                    color: Colors.white.withOpacity(0.7),
+                    color: Colors.white.withValues(alpha: 0.7),
                     fontSize: 14,
                   ),
                   maxLines: 1,
@@ -406,7 +406,7 @@ class _SearchPageApiState extends State<SearchPageApi> {
             child: Text(
               song.duration,
               style: TextStyle(
-                color: Colors.white.withOpacity(0.5),
+                color: Colors.white.withValues(alpha: 0.5),
                 fontSize: 14,
               ),
             ),
