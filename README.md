@@ -6,21 +6,29 @@ A beautiful, modern, and fully-featured music player app built with Flutter and 
 
 ## 📸 Screenshots
 
-### App Interface Gallery
+  ### Home Screen 
+  <img width="1366" height="768" alt="homepage" src="https://github.com/user-attachments/assets/531a4d4d-e286-4a5f-9646-f33b00e663c2" />
 
-<p align="center">
-  <img src="flutter_01.png" alt="Home Screen" width="200"/>
-  <img src="flutter_02.png" alt="Search Interface" width="200"/>
-  <img src="flutter_03.png" alt="Player Screen" width="200"/>
-  <img src="flutter_04.png" alt="Library View" width="200"/>
-</p>
+### Search Interface
+  <img width="1366" height="768" alt="searchpage" src="https://github.com/user-attachments/assets/2642fe30-ef7b-4f08-b164-a833c73c2c2f" />
 
-<p align="center">
-  <img src="flutter_05.png" alt="Playlist Management" width="200"/>
-  <img src="flutter_06.png" alt="Profile Page" width="200"/>
-  <img src="flutter_07.png" alt="Mini Player" width="200"/>
-  <img src="flutter_08.png" alt="Settings" width="200"/>
-</p>
+### Player Screen
+  <img width="1366" height="768" alt="palying music widget" src="https://github.com/user-attachments/assets/d137e93f-d380-464b-a227-8386dffd0116" />
+
+ ### Library View
+ <img width="1366" height="768" alt="librarypage" src="https://github.com/user-attachments/assets/400ad14e-2507-4960-b596-86daea3430e7" />
+
+  ### Songs
+  <img width="1366" height="768" alt="librarypage" src="https://github.com/user-attachments/assets/dfa859fb-c7e7-45ec-885d-527bdf4f259b" />
+
+  ### Profile Page
+  <img width="1366" height="768" alt="profilepage1" src="https://github.com/user-attachments/assets/ee0d8020-5384-4677-b1f9-72033b297a61" />
+
+### App setting
+<img width="1366" height="768" alt="profilepage2" src="https://github.com/user-attachments/assets/f72b7066-1e1d-4449-a465-9598f67f6b58" />
+
+### Help & Support
+<img width="1366" height="768" alt="profilepage3" src="https://github.com/user-attachments/assets/d5a7f71c-f9bf-47ed-9b0a-7f2abb2ada46" />
 
 ---
 
